@@ -54,6 +54,20 @@ a {
   letter-spacing: -0.76px;
 }
 
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp.line-2 {
+  --line-clamp: 2;
+}
+
+.break-all {
+  word-break: break-all;
+}
 /* header */
 .header {
   background: #fffcf4;
@@ -324,6 +338,7 @@ a {
 }
 
 .popular-bottom .course-item {
+  flex: 1;
   border-radius: 12px;
   border: 1px solid #e2dfda;
   background: #fff;
@@ -394,4 +409,72 @@ a {
 
 .popular-bottom .foot .btn-book:hover {
   background: #ffb900;
+}
+
+/* ==============feedback============= */
+.feedback {
+  margin-top: 135px;
+  padding: 96px 0;
+  background: #2e2100;
+}
+
+.feedback-items {
+  display: flex;
+}
+
+.feedback .avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.feedback .name {
+  margin-top: 18px;
+  color: #f7f7f7;
+  font-family: var(--font-heading);
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.42; /* 141.667% */
+}
+
+.feedback .desc {
+  margin-top: 4px;
+  color: #bfbcb2;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.86; /* 185.714% */
+}
+
+.feedback .dots-list {
+  display: flex;
+  gap: 6px;
+}
+
+.feedback .dots {
+  margin-top: 28px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #634700;
+  cursor: pointer;
+}
+
+.feedback .dot2 {
+  background: #ffb900;
+  cursor: default;
+}
+
+.feedback-items .content {
+  width: 66%;
+  margin-left: auto;
+}
+
+.feedback-items blockquote {
+  margin-left: 30px;
+  color: #fff;
+  font-size: 2.6rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.54; /* 153.846% */
 }
